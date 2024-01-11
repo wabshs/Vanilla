@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  mail:
+    host: smtp.yeah.net
+    username: *
+    password: *
+    from: Vanilla<*>
+  #数据库配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/smart_school?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: dyh20030815
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
