@@ -3,7 +3,6 @@ package com.taffy.neko.controller;
 import com.taffy.neko.Result.ResponseResult;
 import com.taffy.neko.entity.User;
 import com.taffy.neko.service.LoginService;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

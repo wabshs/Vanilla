@@ -1,30 +1,85 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <!--  最外层的盒子-->
+  <div class="all">
+    <!--    登录框-->
+    <div class="login_box">
+      <!--      左边放图-->
+      <div class="left_img">
+
+      </div>
+      <!--      右边放登录按钮等-->
+      <div class="right_section">
+        <h1 style="color: cadetblue">✨🎈登录💕🎉</h1>
+        <input type="text" id="username" name="username" placeholder="USERNAME">
+        <input type="password" id="password" name="password" placeholder="PASSWORD">
+        <div>
+          <input type="text" id="verifyCode" name="verifyCode" placeholder="VERIFYCODE">
+        </div>
+        <!--        登录注册-->
+        <div class="login_reg">
+          <el-button type="primary" round size="large">登录</el-button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </template>
 
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+
+body, html {
+  height: 100%;
+  margin: 0;
 }
 
-nav {
-  padding: 30px;
+.all {
+  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* 在水平方向上居中 */
+  align-items: center; /* 在垂直方向上居中 */
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.login_box {
+  width: 800px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+.left_img {
+  flex: 2;
+  background-image: url("assets/login_png.png");
+  background-size: cover; /* 自适应 */
+  border-radius: 20px 0 0 20px;
+}
+
+.right_section {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* 设置垂直方向排列 */
+  align-items: center; /* 居中 */
+}
+
+/*2个输入框 */
+.right_section input {
+  outline: none;
+  border: 0;
+  padding: 10px;
+  border-bottom: 3px solid rgb(80, 80, 170);
+  margin-bottom: 40px;
+}
+
+.right_section input#verifyCode {
+  border-bottom-width: 3px /* 调整下划线的宽度 */
+}
+.login_reg{
+  display: flex;
 }
 </style>
+<script setup>
+</script>
