@@ -34,8 +34,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                // 对于登录接口 允许匿名访问 测试接口直接放行
-                .antMatchers("/c").permitAll()
+                // 对于验证码接口 允许匿名访问 测试接口直接放行
+                .antMatchers("/login/getCode").permitAll()
                 .antMatchers("/user/login").anonymous()
                 // 除上面外的所有请求全部需要鉴权认证
                 .anyRequest().authenticated();

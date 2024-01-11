@@ -4,10 +4,9 @@ server:
 spring:
   mail:
     host: smtp.yeah.net
-    username: *
-    password: *
-    from: Vanilla<*>
-  #数据库配置
+    username: 111
+    password: 1111
+    from: Vanilla<111>
   datasource:
     url: jdbc:mysql://localhost:3306/smart_school?characterEncoding=utf-8&serverTimezone=UTC
     username: root
