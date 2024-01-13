@@ -9,7 +9,7 @@
       </div>
       <!--      右边放登录按钮等-->
       <div class="right_section">
-        <h1 style="color: cadetblue">✨🎈登录💕🎉</h1>
+        <h1 style="color: cadetblue"> 登录 </h1>
         <div class="input-container">
           <input type="text" id="username" name="username" placeholder="USERNAME">
           <input type="password" id="password" name="password" placeholder="PASSWORD">
@@ -17,9 +17,7 @@
         <div class="input-group">
           <input type="text" id="verifyCode" name="verifyCode" placeholder="验证码">
           <!-- 添加一个用于显示验证码的容器 -->
-          <div class="captcha-container">
 
-          </div>
         </div>
 
         <!--        登录注册-->
@@ -40,11 +38,6 @@
   flex-direction: column; /* 垂直方向排列 */
 }
 
-.captcha-container{
-  width: 100px;
-  height: 30px;
-  background-color: #42b983;
-}
 
 
 

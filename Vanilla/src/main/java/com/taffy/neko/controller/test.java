@@ -2,6 +2,7 @@ package com.taffy.neko.controller;
 
 
 import com.taffy.neko.manager.EmailManager;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,8 +26,8 @@ public class test {
     }
 
     @GetMapping("/c")
+    @PreAuthorize("hasAuthority('test')")
     public String test3() {
-        System.out.println();
         return "hello world";
     }
 }
