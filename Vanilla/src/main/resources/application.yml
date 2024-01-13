@@ -8,7 +8,7 @@ spring:
     password: 1111
     from: Vanilla<111>
   datasource:
-    url: jdbc:mysql://localhost:3306/smart_school?characterEncoding=utf-8&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/sg_security?characterEncoding=utf-8&serverTimezone=UTC
     username: root
     password: dyh20030815
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -16,3 +16,4 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:/mapper/**/*.xml
