@@ -26,7 +26,7 @@ public class test {
     }
 
     @GetMapping("/c")
-    @PreAuthorize("hasAuthority('test')")
+    @PreAuthorize("hasAuthority('system:dept:list')")
     public String test3() {
         return "hello world";
     }

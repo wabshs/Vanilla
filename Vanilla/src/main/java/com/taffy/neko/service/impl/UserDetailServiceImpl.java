@@ -4,6 +4,7 @@ package com.taffy.neko.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.taffy.neko.Result.LoginUser;
 import com.taffy.neko.entity.User;
+import com.taffy.neko.mapper.MenuMapper;
 import com.taffy.neko.mapper.UserMapper;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -25,6 +26,9 @@ public class UserDetailServiceImpl implements UserDetailsService {
     @Resource
     private UserMapper userMapper;
 
+    @Resource
+    private MenuMapper menuMapper;
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
@@ -38,8 +42,9 @@ public class UserDetailServiceImpl implements UserDetailsService {
         }
 
         //查询授权信息 RBAC 从数据库查 然后封装
-        List<String> list = new ArrayList<>(Arrays.asList("test","admin"));
+//        List<String> list = new ArrayList<>(Arrays.asList("test","admin"));
+        List<String> list = menuMapper.selectPermsByUserId(user.getId());
         //封装成UserDetails返回
-        return new LoginUser(user,list);
+        return new LoginUser(user, list);
     }
 }
