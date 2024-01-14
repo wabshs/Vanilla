@@ -1,4 +1,4 @@
-# 智慧校园小程序
+# 智慧校园小程序（开发中）
 
 ![Static Badge](https://img.shields.io/badge/License-MIT-red)
 ![Static Badge](https://img.shields.io/badge/Powered-SpringBoot-blue)
@@ -18,6 +18,16 @@
 # 前端技术栈
 1. 核心框架：Vue2.x Vue-Router
 2. UI框架：Element-UI
+
+# 前端运行
+1. cd ./vanilla_front
+2. npm install
+3. npm run serve
+
+# 后端运行
+1. 在本机的数据库运行SQL文件
+2. 打开Redis
+3. 装好依赖直接运行主类即可
 
 # License
 MIT
