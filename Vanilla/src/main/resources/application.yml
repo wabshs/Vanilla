@@ -2,6 +2,8 @@ server:
   port: 8081
 
 spring:
+  application:
+    name: 0721绫地宁宁
   mail:
     host: smtp.yeah.net
     username: 111
