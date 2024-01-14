@@ -8,16 +8,20 @@ spring:
     password: 1111
     from: Vanilla<111>
   datasource:
-    url: ENC(6xEHPBJUJ1uKdA2bX7tMlc21Q026cK4SsRAdwacvU0O7t2BIAgAW0h1qUf/AHDOIacHek+sV7EYRSqBuCJIvI9xfETt0rpfAVdilgrgws/H4Pd3Ts5XgwnCBcMpUPiks)
+    url: ENC(5EL8W5f7mmuBc8vej1LQDkh8PdLL1Am/QaiRMGq3oPeLZKuBTzX8MiM6rmTuY2+Sg8kJNkMzm9oTTuNv5uakGtdA5De+pXdHIRGr1aFQwy/VztmfMcBbl0RL33cg6kH8)
     username: root
-    password: ENC(ekLcxMtV/uoUcJmQEt2N4TXhVinnX4Wk)
+    password: ENC(vxS8qF46MFx74tDPiBCbthRpU/AbrOcw)
     driver-class-name: com.mysql.cj.jdbc.Driver
+  #redis
+  redis:
+    host: ENC(vFPwbiT1vGfQ/h4IRYltiKxr3g6J64xb)
+    password: ENC(LyjiFW+Qfm1VdPUyyRWJjePElB5HN+XN)
 
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath*:/mapper/**/*.xml
-
+#接口文档
 knife4j:
   enable: true
 
