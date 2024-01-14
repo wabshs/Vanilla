@@ -38,6 +38,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 // 对于验证码接口 允许匿名访问 测试接口直接放行
                 .antMatchers("/login/getCode").permitAll()
+                //knife4j文档接口放行
+                .antMatchers("/doc.html","/swagger/**","/swagger-ui.html","/webjars/**","/v2/**","/v2/api-docs-ext/**","/swagger-resources/**").permitAll()
                 .antMatchers("/user/login").anonymous()
                 // 除上面外的所有请求全部需要鉴权认证
                 .anyRequest().authenticated();
