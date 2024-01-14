@@ -8,9 +8,9 @@ spring:
     password: 1111
     from: Vanilla<111>
   datasource:
-    url: jdbc:mysql://localhost:3306/sg_security?characterEncoding=utf-8&serverTimezone=UTC
+    url: ENC(6xEHPBJUJ1uKdA2bX7tMlc21Q026cK4SsRAdwacvU0O7t2BIAgAW0h1qUf/AHDOIacHek+sV7EYRSqBuCJIvI9xfETt0rpfAVdilgrgws/H4Pd3Ts5XgwnCBcMpUPiks)
     username: root
-    password: dyh20030815
+    password: ENC(ekLcxMtV/uoUcJmQEt2N4TXhVinnX4Wk)
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis-plus:
@@ -20,6 +20,9 @@ mybatis-plus:
 
 knife4j:
   enable: true
-  openapi:
-    title: 测试文档
-    description: 111
+
+# 加密算法
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
