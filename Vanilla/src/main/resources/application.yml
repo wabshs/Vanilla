@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: 0721绫地宁宁
+    name: 永雏塔菲
   mail:
     host: smtp.yeah.net
     username: 111
