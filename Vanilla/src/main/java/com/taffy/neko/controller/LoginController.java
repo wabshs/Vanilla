@@ -2,6 +2,7 @@ package com.taffy.neko.controller;
 
 import com.taffy.neko.Result.ResponseResult;
 import com.taffy.neko.entity.User;
+import com.taffy.neko.entity.dto.LoginReqDTO;
 import com.taffy.neko.manager.VerificationCodeGenerateManager;
 import com.taffy.neko.service.LoginService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,13 +19,11 @@ public class LoginController {
     @Resource
     private LoginService loginService;
 
-    @Resource
-    private VerificationCodeGenerateManager verificationCodeGenerateManager;
 
     @PostMapping("/user/login")
-    public ResponseResult login(@RequestBody User user) {
+    public ResponseResult login(@RequestBody LoginReqDTO reqDTO) {
         //登录
-        return loginService.login(user);
+        return loginService.login(reqDTO);
     }
 
     @PostMapping("/user/logout")
@@ -35,6 +34,6 @@ public class LoginController {
 
     @GetMapping("/login/getCode")
     public void getCode(HttpServletResponse response) {
-        verificationCodeGenerateManager.getCode(response);
+        loginService.getCode(response);
     }
 }

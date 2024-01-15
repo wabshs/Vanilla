@@ -23,23 +23,4 @@ public class VerificationCodeGenerateManagerImpl implements VerificationCodeGene
         return RandomUtil.randomNumbers(6);
     }
 
-    @Override
-    public void getCode(HttpServletResponse response) {
-        //随机生成四位数验证码
-        RandomGenerator randomGenerator = new RandomGenerator("0123456789", 4);
-        //定义图片的显示大小
-        LineCaptcha lineCaptcha = CaptchaUtil.createLineCaptcha(100, 30);
-        response.setContentType("image/jpeg");
-        response.setHeader("Pragma", "No-cache");
-        try {
-            //调用父类的setGenerator方法
-            lineCaptcha.setGenerator(randomGenerator);
-            lineCaptcha.write(response.getOutputStream());
-            logger.info("生成的验证码:{}", lineCaptcha.getCode());
-            //关闭流
-            response.getOutputStream().close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }

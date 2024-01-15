@@ -10,10 +10,5 @@ public interface VerificationCodeGenerateManager {
      */
     String VerificationCode();
 
-    /**
-     * 登录图形验证码
-     *
-     * @param response 流
-     */
-    void getCode(HttpServletResponse response);
+
 }
