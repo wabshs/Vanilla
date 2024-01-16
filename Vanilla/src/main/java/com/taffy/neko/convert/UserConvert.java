@@ -6,9 +6,10 @@ import com.taffy.neko.entity.dto.UserRegisterReqDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
+
 @Mapper
-public interface UserMapper {
-    UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
+public interface UserConvert {
+    UserConvert INSTANCE = Mappers.getMapper(UserConvert.class);
 
     User toUser(UserRegisterReqDTO reqDTO);
 }
