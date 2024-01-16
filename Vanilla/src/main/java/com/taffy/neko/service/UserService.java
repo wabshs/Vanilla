@@ -9,4 +9,6 @@ public interface UserService extends IService<User> {
 
 
     ResponseResult<?> userRegister(UserRegisterReqDTO reqDTO);
+
+    ResponseResult<?> sendEmailCode(String email);
 }

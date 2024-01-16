@@ -26,5 +26,7 @@ public class UserRegisterReqDTO {
     //头像
     private String avatar;
 
+    //邮箱验证码
+    private String emailCode;
 
 }

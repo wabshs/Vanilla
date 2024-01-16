@@ -6,9 +6,9 @@ spring:
     name: 永雏塔菲
   mail:
     host: smtp.yeah.net
-    username: 111
-    password: 1111
-    from: Vanilla<111>
+    username: ENC(hwCnHhD0xEbH8rokoiMFgaFESy31EYKr6E+Dcp2/75s=)
+    password: ENC(IbeI2jNuBY+bxDgucULNTWL0AECF2btV+bKPcL4xWhA=)
+    from: ENC(Hcz9lzwHj/SbuNURxsMaimXAuor5DHoB8t3Q8HdJ/xdKN8CqU4OhMg==)
   datasource:
     url: ENC(5EL8W5f7mmuBc8vej1LQDkh8PdLL1Am/QaiRMGq3oPeLZKuBTzX8MiM6rmTuY2+Sg8kJNkMzm9oTTuNv5uakGtdA5De+pXdHIRGr1aFQwy/VztmfMcBbl0RL33cg6kH8)
     username: root

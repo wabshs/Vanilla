@@ -11,9 +11,7 @@ public interface EmailManager {
     void sendEmail(String to, String subject, String content);
 
     /**
-     *
      * @param to 收件人
-     *
      */
-    void sendVerificationCodeEmail(String to);
+    void sendVerificationCodeEmail(String to, String emailCode);
 }

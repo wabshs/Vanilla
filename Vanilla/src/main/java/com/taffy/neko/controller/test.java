@@ -21,11 +21,6 @@ public class test {
         manager.sendEmail("840654613@qq.com", "测试", "111");
     }
 
-    @GetMapping("/b")
-    public String test2() {
-        manager.sendVerificationCodeEmail("1142572872@qq.com");
-        return "hello world";
-    }
 
     @GetMapping("/c")
     @PreAuthorize("hasAuthority('system:dept:list')")

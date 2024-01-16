@@ -15,8 +15,6 @@ public class EmailManagerImpl implements EmailManager {
     @Resource
     private JavaMailSender sender;
 
-    @Resource
-    private VerificationCodeGenerateManager verificationCodeGenerateManager;
 
     @Value("${spring.mail.from}")
     private String from;
@@ -37,10 +35,9 @@ public class EmailManagerImpl implements EmailManager {
     }
 
     @Override
-    public void sendVerificationCodeEmail(String to) {
-        String verificationCode = verificationCodeGenerateManager.VerificationCode(); //验证码
-        String subject = "智慧校园验证码";
-        String content = "【智慧校园】您好，您的验证码:" + verificationCode + "。 五分钟内有效，请勿泄露。";
+    public void sendVerificationCodeEmail(String to,String emailCode) {
+        String subject = "Neko";
+        String content = "【智慧校园】您好，您的验证码:" + emailCode + "。 五分钟内有效，请勿泄露。";
         sendEmail(to, subject, content);
     }
 
