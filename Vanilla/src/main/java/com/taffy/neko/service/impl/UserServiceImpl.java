@@ -1,6 +1,7 @@
 package com.taffy.neko.service.impl;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.taffy.neko.Result.ResponseResult;
 import com.taffy.neko.convert.UserConvert;
@@ -52,6 +53,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             User user = UserConvert.INSTANCE.toUser(reqDTO);
             userMapper.insert(user);
             redisCache.deleteObject(reqDTO.getEmail());//注册完之后即删除缓存的验证码
+            LambdaQueryWrapper<User> wrapper = new LambdaQueryWrapper<>();
+            wrapper.eq(User::getEmail,reqDTO.getEmail());
+            Long id = userMapper.selectOne(wrapper).getId(); //刚刚生成的用户的id
             return new ResponseResult<>(200, "注册成功");
         } else {
             return new ResponseResult<>(500, "注册失败,请检查验证码是否有误~");
